@@ -4,14 +4,20 @@
   "description": " ",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index"
   },
   "author": "lucas lopes",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "sequelize": "^6.35.2"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.7",
+    "pg": "^8.10.0",
+    "process": "^0.11.10",
+    "sequelize": "^6.35.2",
+    "sqlite3": "^5.1.7"
   }
 }

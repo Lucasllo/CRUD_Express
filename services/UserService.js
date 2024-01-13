@@ -1,31 +1,31 @@
-import { userRepository } from "../repositories/UserRepository.js"
+import userRepository from "../repositories/UserRepository.js";
 
 const saveUser = (userModel) => {
-    return userRepository.saveUser();
-}
+  return userRepository.saveUser(userModel);
+};
 
 const getUserById = (id) => {
-    return userRepository.getUserById();
-}
+  return userRepository.getUserById(id);
+};
 
 const getAllUsers = () => {
-    return userRepository.getAllUsers();
-}
+  return userRepository.getAllUsers();
+};
 
 const deleteUserById = (id) => {
-    return userRepository.deleteUserById();
-}
+  return userRepository.deleteUserById(id);
+};
 
 const updateUserById = (userModel, id) => {
-    return userRepository.updateUserById(userModel, id);
-}
+  return userRepository.updateUserById(userModel, id);
+};
 
 const service = {
-    saveUser,
-    getUserById,
-    getAllUsers,
-    deleteUserById,
-    updateUserById
-}
+  saveUser,
+  getUserById,
+  getAllUsers,
+  deleteUserById,
+  updateUserById,
+};
 
 export default service;

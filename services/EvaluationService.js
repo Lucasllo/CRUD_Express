@@ -1,31 +1,31 @@
-import { evaluationRepository } from "../repositories/EvaluationRepository.js"
+import evaluationRepository from "../repositories/EvaluationRepository.js";
 
 const saveEvaluation = (evaluationModel) => {
-    return evaluationRepository.saveEvaluation();
-}
+  return evaluationRepository.saveEvaluation(evaluationModel);
+};
 
 const getEvaluationById = (id) => {
-    return evaluationRepository.getEvaluationById();
-}
+  return evaluationRepository.getEvaluationById(id);
+};
 
 const getAllEvaluations = () => {
-    return evaluationRepository.getAllEvaluations();
-}
+  return evaluationRepository.getAllEvaluations();
+};
 
 const deleteEvaluationById = (id) => {
-    return evaluationRepository.deleteEvaluationById();
-}
+  return evaluationRepository.deleteEvaluationById(id);
+};
 
 const updateEvaluationById = (evaluationModel, id) => {
-    return evaluationRepository.updateEvaluationById(evaluationModel, id);
-}
+  return evaluationRepository.updateEvaluationById(evaluationModel, id);
+};
 
 const service = {
-    saveEvaluation,
-    getEvaluationById,
-    getAllEvaluations,
-    deleteEvaluationById,
-    updateEvaluationById
-}
+  saveEvaluation,
+  getEvaluationById,
+  getAllEvaluations,
+  deleteEvaluationById,
+  updateEvaluationById,
+};
 
 export default service;

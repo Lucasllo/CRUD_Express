@@ -1,17 +1,8 @@
-import { Sequelize } from 'sequelize';
+import { Sequelize } from "sequelize";
 
-const sequelize = new Sequelize(
-    'database',
-    'postgres',
-    'postgres',
-    {
-        host: 'localhost',
-        dialect: 'postgres',
-        port: 5432,
-        define: {
-            timestamps: false
-        }
-    }
-);
+const sequelize = new Sequelize("database", "postgres", "postgres", {
+  host: "./data.sqlite",
+  dialect: "sqlite",
+});
 
 export default sequelize;
