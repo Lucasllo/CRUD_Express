@@ -1,7 +1,23 @@
 import express from "express";
 import userService from "../services/UserService.js";
+import multer from "multer";
+import process from "process";
 
 const router = express.Router();
+
+const storage = multer.diskStorage({
+  destination: function (req, file, callback) {
+    callback(null, "./images");
+  },
+  filename: function (req, file, callback) {
+    callback(
+      null,
+      `${req.body.nome}_${req.body.sobrenome}_${Date.now()}${file.originalname}`
+    );
+  },
+});
+
+const upload = multer({ storage: storage }).single("file");
 
 router.post("/addUser", async function (req, res) {
   const userModel = {
