@@ -6,6 +6,7 @@ const router = express.Router();
 router.post("/addTeacher", async function (req, res) {
   const teacherModel = {
     nome: req.body.nome,
+    course_id: req.body.course_id,
   };
 
   const teacher = await teacherService.saveTeacher(teacherModel);
@@ -30,9 +31,13 @@ router.get("/getTeacher/:id", async function (req, res) {
 router.put("/updateTeacher/:id", async function (req, res) {
   const teacherModel = {
     nome: req.body.nome,
+    course_id: req.body.course_id,
   };
 
-  const teacher = await teacherService.saveTeacher(teacherModel, req.params.id);
+  const teacher = await teacherService.updateTeacherById(
+    teacherModel,
+    req.params.id
+  );
   return res.status(200).json(teacher);
 });
 

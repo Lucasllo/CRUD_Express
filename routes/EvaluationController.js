@@ -34,7 +34,7 @@ router.put("/updateEvaluation/:id", async function (req, res) {
     concept: req.body.concept,
   };
 
-  const evaluation = await evaluationService.saveEvaluation(
+  const evaluation = await evaluationService.updateEvaluationById(
     evaluationModel,
     req.params.id
   );

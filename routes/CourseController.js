@@ -32,7 +32,10 @@ router.put("/updateCourse/:id", async function (req, res) {
     nome: req.body.nome,
   };
 
-  const course = await courseService.saveCourse(courseModel, req.params.id);
+  const course = await courseService.updateCourseById(
+    courseModel,
+    req.params.id
+  );
   return res.status(200).json(course);
 });
 

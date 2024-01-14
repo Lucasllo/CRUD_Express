@@ -38,7 +38,7 @@ router.put("/updateUser/:id", async function (req, res) {
     genero: req.body.genero,
   };
 
-  const user = await userService.saveUser(userModel, req.params.id);
+  const user = await userService.updateUserById(userModel, req.params.id);
   return res.status(200).json(user);
 });
 
