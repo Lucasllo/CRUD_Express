@@ -25,6 +25,7 @@ router.post("/addUser", async function (req, res) {
     sobrenome: req.body.sobrenome,
     idade: req.body.idade,
     genero: req.body.genero,
+    usuario_imagem: req.file.path
   };
 
   const user = await userService.saveUser(userModel);
@@ -52,6 +53,7 @@ router.put("/updateUser/:id", async function (req, res) {
     sobrenome: req.body.sobrenome,
     idade: req.body.idade,
     genero: req.body.genero,
+    usuario_imagem: req.file.path
   };
 
   const user = await userService.updateUserById(userModel, req.params.id);

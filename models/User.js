@@ -20,6 +20,7 @@ const User = sequelize.define(
     },
     idade: DataTypes.STRING,
     genero: DataTypes.STRING,
+    usuario_imagem: DataTypes.STRING,
   },
   { underscored: true }
 );
